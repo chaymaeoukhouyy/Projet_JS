@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="courses.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+         <ul>
+          <li> <a href="index2.html">Home</a></li>
+          <li> <a href="courses.html">Courses</a></li> 
+          <li>  <a href="about.html">About</a></li>
+        </ul>
+       </nav>
+       <section class="menu">
+        <div class="leftpart">
+          <div class="searchinput">
+            <input type="text" placeholder="Search" id="search">
+          </div>
+          
+          <!-- filter buttons -->
+          <div class="btn-container">
+            <div class="title">
+              Categories
+            </div>
+            <button type="button" class="filter-btn" data-id="all" onclick="filterProduct('ALL')">All</button> 
+            <button type="button" class="filter-btn" data-id="CSS" onclick="filterProduct('CSS')">CSS</button>
+            <button type="button" class="filter-btn" data-id="JS" onclick="filterProduct('JS')">JS</button>
+            <button type="button" class="filter-btn" data-id="HTML" onclick="filterProduct('HTML')">HTML</button> 
+            <button type="button" class="filter-btn" data-id="PHP" onclick="filterProduct('PHP')">PHP</button> 
+          </div>
+          <div class="range">
+            <p>Price</p>
+            <input type="range"  id="range"  value="0" min="0" max="70" onmousemove="rangeSlider(this.value)" onclick="price(this.value)">
+            <span id="rangevalue" > </span>
+        </div>
+        </div>
+        
+        <!-- menu items -->
+        <div class="section-center">
+          <!-- single item -->
+          <article class="menu-item">
+            <img src="" alt="menu item" class="coursephoto" />
+            <div class="item-info">
+              <header>
+                <h4 class="coursename"> </h4> 
+                <h4 class="price"> </h4> 
+              </header>
+             </div>
+          </article>
+          </div>
+      </section>
+      <script src="courses.js"></script>
+</body>
+</html>
